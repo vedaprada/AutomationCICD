@@ -25,7 +25,8 @@ public class StandAloneTest2 extends BaseTest {
 	@Test(dataProvider = "getData", groups = {"purchase"})
 	public void submitOrder(HashMap<String, String> input) throws IOException, InterruptedException
 	{
-		// TODO Auto-generated method stub	
+		// TODO Auto-generated method stub
+		// NEW COMMENTS -- To test CICD	
 		ProductCatalogue productcatalogue = landingpage.loginApplication(input.get("email"), input.get("password"));		
 		List<WebElement> Cartproducts = productcatalogue.getProductList();
 		productcatalogue.addToCart(input.get("productName"));
